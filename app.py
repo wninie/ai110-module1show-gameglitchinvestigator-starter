@@ -35,6 +35,7 @@ def check_guess(guess, secret):
 
     try:
         #FIXME: Too high means the user should go lower and vise versa
+        #FIX: Switched Go lower and Go higher via AI agent
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
         else:
@@ -54,6 +55,8 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         if points < 10:
             points = 10
         return current_score + points
+    #FIXME: Point logic is weird: why +5 when guess is too high
+    #FIX: Change curr score to -=5 when the guess is too high
     if outcome == "Too High":
         return current_score - 5
 
