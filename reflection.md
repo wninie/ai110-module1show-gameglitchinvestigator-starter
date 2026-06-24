@@ -3,6 +3,7 @@
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
 ## 1. What was broken when you started?
+The hints were broken, it seems like it is hinting the opposite. For example the number to be guessed was 15, and I guessed 1, the hint would tell me to go lower. On the other hand if I guessed 89, the hint would tell me to go higher. I also noticed that you can only play this game once. Once you press the new game button, it will reset your "attempts left" but you won't be able to submit a new guess. 
 
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
@@ -14,9 +15,11 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|NewGame| Restart game      |Restart but cant |
+|       |                   | submit guesses  |
+-------------------------------------------------
+| 100   | Go lower hint     | Go higher hint  |                         |
+| 0     | go higher hint    | Go lower hint   |                        |
 
 ---
 
